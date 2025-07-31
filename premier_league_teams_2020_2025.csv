@@ -1,0 +1,121 @@
+﻿season,team_id,team_name,image_url
+2019/2020,42,Arsenal,https://api.sofascore.app/api/v1/team/42/image
+2019/2020,31,Leicester City,https://api.sofascore.app/api/v1/team/31/image
+2019/2020,30,Brighton & Hove Albion,https://api.sofascore.app/api/v1/team/30/image
+2019/2020,40,Aston Villa,https://api.sofascore.app/api/v1/team/40/image
+2019/2020,60,Bournemouth,https://api.sofascore.app/api/v1/team/60/image
+2019/2020,3,Wolverhampton,https://api.sofascore.app/api/v1/team/3/image
+2019/2020,17,Manchester City,https://api.sofascore.app/api/v1/team/17/image
+2019/2020,37,West Ham United,https://api.sofascore.app/api/v1/team/37/image
+2019/2020,263,Norwich City,https://api.sofascore.app/api/v1/team/263/image
+2019/2020,7,Crystal Palace,https://api.sofascore.app/api/v1/team/7/image
+2019/2020,33,Tottenham Hotspur,https://api.sofascore.app/api/v1/team/33/image
+2019/2020,35,Manchester United,https://api.sofascore.app/api/v1/team/35/image
+2019/2020,45,Southampton,https://api.sofascore.app/api/v1/team/45/image
+2019/2020,38,Chelsea,https://api.sofascore.app/api/v1/team/38/image
+2019/2020,15,Sheffield United,https://api.sofascore.app/api/v1/team/15/image
+2019/2020,6,Burnley,https://api.sofascore.app/api/v1/team/6/image
+2019/2020,48,Everton,https://api.sofascore.app/api/v1/team/48/image
+2019/2020,39,Newcastle United,https://api.sofascore.app/api/v1/team/39/image
+2019/2020,24,Watford,https://api.sofascore.app/api/v1/team/24/image
+2019/2020,44,Liverpool,https://api.sofascore.app/api/v1/team/44/image
+2020/2021,42,Arsenal,https://api.sofascore.app/api/v1/team/42/image
+2020/2021,31,Leicester City,https://api.sofascore.app/api/v1/team/31/image
+2020/2021,30,Brighton & Hove Albion,https://api.sofascore.app/api/v1/team/30/image
+2020/2021,34,Leeds United,https://api.sofascore.app/api/v1/team/34/image
+2020/2021,40,Aston Villa,https://api.sofascore.app/api/v1/team/40/image
+2020/2021,3,Wolverhampton,https://api.sofascore.app/api/v1/team/3/image
+2020/2021,43,Fulham,https://api.sofascore.app/api/v1/team/43/image
+2020/2021,17,Manchester City,https://api.sofascore.app/api/v1/team/17/image
+2020/2021,37,West Ham United,https://api.sofascore.app/api/v1/team/37/image
+2020/2021,33,Tottenham Hotspur,https://api.sofascore.app/api/v1/team/33/image
+2020/2021,7,Crystal Palace,https://api.sofascore.app/api/v1/team/7/image
+2020/2021,35,Manchester United,https://api.sofascore.app/api/v1/team/35/image
+2020/2021,45,Southampton,https://api.sofascore.app/api/v1/team/45/image
+2020/2021,38,Chelsea,https://api.sofascore.app/api/v1/team/38/image
+2020/2021,15,Sheffield United,https://api.sofascore.app/api/v1/team/15/image
+2020/2021,6,Burnley,https://api.sofascore.app/api/v1/team/6/image
+2020/2021,48,Everton,https://api.sofascore.app/api/v1/team/48/image
+2020/2021,39,Newcastle United,https://api.sofascore.app/api/v1/team/39/image
+2020/2021,8,West Bromwich Albion,https://api.sofascore.app/api/v1/team/8/image
+2020/2021,44,Liverpool,https://api.sofascore.app/api/v1/team/44/image
+2021/2022,42,Arsenal,https://api.sofascore.app/api/v1/team/42/image
+2021/2022,31,Leicester City,https://api.sofascore.app/api/v1/team/31/image
+2021/2022,34,Leeds United,https://api.sofascore.app/api/v1/team/34/image
+2021/2022,30,Brighton & Hove Albion,https://api.sofascore.app/api/v1/team/30/image
+2021/2022,50,Brentford,https://api.sofascore.app/api/v1/team/50/image
+2021/2022,40,Aston Villa,https://api.sofascore.app/api/v1/team/40/image
+2021/2022,3,Wolverhampton,https://api.sofascore.app/api/v1/team/3/image
+2021/2022,17,Manchester City,https://api.sofascore.app/api/v1/team/17/image
+2021/2022,37,West Ham United,https://api.sofascore.app/api/v1/team/37/image
+2021/2022,263,Norwich City,https://api.sofascore.app/api/v1/team/263/image
+2021/2022,33,Tottenham Hotspur,https://api.sofascore.app/api/v1/team/33/image
+2021/2022,7,Crystal Palace,https://api.sofascore.app/api/v1/team/7/image
+2021/2022,35,Manchester United,https://api.sofascore.app/api/v1/team/35/image
+2021/2022,45,Southampton,https://api.sofascore.app/api/v1/team/45/image
+2021/2022,38,Chelsea,https://api.sofascore.app/api/v1/team/38/image
+2021/2022,6,Burnley,https://api.sofascore.app/api/v1/team/6/image
+2021/2022,48,Everton,https://api.sofascore.app/api/v1/team/48/image
+2021/2022,39,Newcastle United,https://api.sofascore.app/api/v1/team/39/image
+2021/2022,24,Watford,https://api.sofascore.app/api/v1/team/24/image
+2021/2022,44,Liverpool,https://api.sofascore.app/api/v1/team/44/image
+2022/2023,42,Arsenal,https://api.sofascore.app/api/v1/team/42/image
+2022/2023,31,Leicester City,https://api.sofascore.app/api/v1/team/31/image
+2022/2023,30,Brighton & Hove Albion,https://api.sofascore.app/api/v1/team/30/image
+2022/2023,34,Leeds United,https://api.sofascore.app/api/v1/team/34/image
+2022/2023,50,Brentford,https://api.sofascore.app/api/v1/team/50/image
+2022/2023,40,Aston Villa,https://api.sofascore.app/api/v1/team/40/image
+2022/2023,60,Bournemouth,https://api.sofascore.app/api/v1/team/60/image
+2022/2023,14,Nottingham Forest,https://api.sofascore.app/api/v1/team/14/image
+2022/2023,3,Wolverhampton,https://api.sofascore.app/api/v1/team/3/image
+2022/2023,17,Manchester City,https://api.sofascore.app/api/v1/team/17/image
+2022/2023,43,Fulham,https://api.sofascore.app/api/v1/team/43/image
+2022/2023,37,West Ham United,https://api.sofascore.app/api/v1/team/37/image
+2022/2023,7,Crystal Palace,https://api.sofascore.app/api/v1/team/7/image
+2022/2023,33,Tottenham Hotspur,https://api.sofascore.app/api/v1/team/33/image
+2022/2023,35,Manchester United,https://api.sofascore.app/api/v1/team/35/image
+2022/2023,45,Southampton,https://api.sofascore.app/api/v1/team/45/image
+2022/2023,38,Chelsea,https://api.sofascore.app/api/v1/team/38/image
+2022/2023,48,Everton,https://api.sofascore.app/api/v1/team/48/image
+2022/2023,39,Newcastle United,https://api.sofascore.app/api/v1/team/39/image
+2022/2023,44,Liverpool,https://api.sofascore.app/api/v1/team/44/image
+2023/2024,42,Arsenal,https://api.sofascore.app/api/v1/team/42/image
+2023/2024,30,Brighton & Hove Albion,https://api.sofascore.app/api/v1/team/30/image
+2023/2024,50,Brentford,https://api.sofascore.app/api/v1/team/50/image
+2023/2024,40,Aston Villa,https://api.sofascore.app/api/v1/team/40/image
+2023/2024,60,Bournemouth,https://api.sofascore.app/api/v1/team/60/image
+2023/2024,14,Nottingham Forest,https://api.sofascore.app/api/v1/team/14/image
+2023/2024,3,Wolverhampton,https://api.sofascore.app/api/v1/team/3/image
+2023/2024,17,Manchester City,https://api.sofascore.app/api/v1/team/17/image
+2023/2024,43,Fulham,https://api.sofascore.app/api/v1/team/43/image
+2023/2024,37,West Ham United,https://api.sofascore.app/api/v1/team/37/image
+2023/2024,33,Tottenham Hotspur,https://api.sofascore.app/api/v1/team/33/image
+2023/2024,7,Crystal Palace,https://api.sofascore.app/api/v1/team/7/image
+2023/2024,35,Manchester United,https://api.sofascore.app/api/v1/team/35/image
+2023/2024,38,Chelsea,https://api.sofascore.app/api/v1/team/38/image
+2023/2024,15,Sheffield United,https://api.sofascore.app/api/v1/team/15/image
+2023/2024,6,Burnley,https://api.sofascore.app/api/v1/team/6/image
+2023/2024,48,Everton,https://api.sofascore.app/api/v1/team/48/image
+2023/2024,72,Luton Town,https://api.sofascore.app/api/v1/team/72/image
+2023/2024,39,Newcastle United,https://api.sofascore.app/api/v1/team/39/image
+2023/2024,44,Liverpool,https://api.sofascore.app/api/v1/team/44/image
+2024/2025,42,Arsenal,https://api.sofascore.app/api/v1/team/42/image
+2024/2025,31,Leicester City,https://api.sofascore.app/api/v1/team/31/image
+2024/2025,30,Brighton & Hove Albion,https://api.sofascore.app/api/v1/team/30/image
+2024/2025,50,Brentford,https://api.sofascore.app/api/v1/team/50/image
+2024/2025,60,Bournemouth,https://api.sofascore.app/api/v1/team/60/image
+2024/2025,40,Aston Villa,https://api.sofascore.app/api/v1/team/40/image
+2024/2025,14,Nottingham Forest,https://api.sofascore.app/api/v1/team/14/image
+2024/2025,3,Wolverhampton,https://api.sofascore.app/api/v1/team/3/image
+2024/2025,43,Fulham,https://api.sofascore.app/api/v1/team/43/image
+2024/2025,17,Manchester City,https://api.sofascore.app/api/v1/team/17/image
+2024/2025,37,West Ham United,https://api.sofascore.app/api/v1/team/37/image
+2024/2025,32,Ipswich Town,https://api.sofascore.app/api/v1/team/32/image
+2024/2025,33,Tottenham Hotspur,https://api.sofascore.app/api/v1/team/33/image
+2024/2025,7,Crystal Palace,https://api.sofascore.app/api/v1/team/7/image
+2024/2025,35,Manchester United,https://api.sofascore.app/api/v1/team/35/image
+2024/2025,45,Southampton,https://api.sofascore.app/api/v1/team/45/image
+2024/2025,38,Chelsea,https://api.sofascore.app/api/v1/team/38/image
+2024/2025,48,Everton,https://api.sofascore.app/api/v1/team/48/image
+2024/2025,39,Newcastle United,https://api.sofascore.app/api/v1/team/39/image
+2024/2025,44,Liverpool,https://api.sofascore.app/api/v1/team/44/image

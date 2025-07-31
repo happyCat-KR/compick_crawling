@@ -1,0 +1,239 @@
+﻿team_id,team_name,slug,image_url,league,season
+42,Arsenal,arsenal,https://api.sofascore.app/api/v1/team/42/image,Premier League,2019/2020
+31,Leicester City,leicester-city,https://api.sofascore.app/api/v1/team/31/image,Premier League,2019/2020
+30,Brighton & Hove Albion,brighton-and-hove-albion,https://api.sofascore.app/api/v1/team/30/image,Premier League,2019/2020
+40,Aston Villa,aston-villa,https://api.sofascore.app/api/v1/team/40/image,Premier League,2019/2020
+60,Bournemouth,bournemouth,https://api.sofascore.app/api/v1/team/60/image,Premier League,2019/2020
+3,Wolverhampton,wolverhampton,https://api.sofascore.app/api/v1/team/3/image,Premier League,2019/2020
+17,Manchester City,manchester-city,https://api.sofascore.app/api/v1/team/17/image,Premier League,2019/2020
+37,West Ham United,west-ham-united,https://api.sofascore.app/api/v1/team/37/image,Premier League,2019/2020
+263,Norwich City,norwich-city,https://api.sofascore.app/api/v1/team/263/image,Premier League,2019/2020
+7,Crystal Palace,crystal-palace,https://api.sofascore.app/api/v1/team/7/image,Premier League,2019/2020
+33,Tottenham Hotspur,tottenham-hotspur,https://api.sofascore.app/api/v1/team/33/image,Premier League,2019/2020
+35,Manchester United,manchester-united,https://api.sofascore.app/api/v1/team/35/image,Premier League,2019/2020
+45,Southampton,southampton,https://api.sofascore.app/api/v1/team/45/image,Premier League,2019/2020
+38,Chelsea,chelsea,https://api.sofascore.app/api/v1/team/38/image,Premier League,2019/2020
+15,Sheffield United,sheffield-united,https://api.sofascore.app/api/v1/team/15/image,Premier League,2019/2020
+6,Burnley,burnley,https://api.sofascore.app/api/v1/team/6/image,Premier League,2019/2020
+48,Everton,everton,https://api.sofascore.app/api/v1/team/48/image,Premier League,2019/2020
+39,Newcastle United,newcastle-united,https://api.sofascore.app/api/v1/team/39/image,Premier League,2019/2020
+24,Watford,watford,https://api.sofascore.app/api/v1/team/24/image,Premier League,2019/2020
+44,Liverpool,liverpool,https://api.sofascore.app/api/v1/team/44/image,Premier League,2019/2020
+34,Leeds United,leeds-united,https://api.sofascore.app/api/v1/team/34/image,Premier League,2020/2021
+43,Fulham,fulham,https://api.sofascore.app/api/v1/team/43/image,Premier League,2020/2021
+8,West Bromwich Albion,west-bromwich-albion,https://api.sofascore.app/api/v1/team/8/image,Premier League,2020/2021
+50,Brentford,brentford,https://api.sofascore.app/api/v1/team/50/image,Premier League,2021/2022
+14,Nottingham Forest,nottingham-forest,https://api.sofascore.app/api/v1/team/14/image,Premier League,2022/2023
+72,Luton Town,luton-town,https://api.sofascore.app/api/v1/team/72/image,Premier League,2023/2024
+32,Ipswich Town,ipswich-town,https://api.sofascore.app/api/v1/team/32/image,Premier League,2024/2025
+2829,Real Madrid,real-madrid,https://api.sofascore.app/api/v1/team/2829/image,LaLiga,2019/2020
+2885,Deportivo Alavés,deportivo-alaves,https://api.sofascore.app/api/v1/team/2885/image,LaLiga,2019/2020
+2816,Real Betis,real-betis,https://api.sofascore.app/api/v1/team/2816/image,LaLiga,2019/2020
+2821,Celta Vigo,celta-vigo,https://api.sofascore.app/api/v1/team/2821/image,LaLiga,2019/2020
+2814,Espanyol,espanyol,https://api.sofascore.app/api/v1/team/2814/image,LaLiga,2019/2020
+2859,Getafe,getafe,https://api.sofascore.app/api/v1/team/2859/image,LaLiga,2019/2020
+2828,Valencia,valencia,https://api.sofascore.app/api/v1/team/2828/image,LaLiga,2019/2020
+2836,Atlético Madrid,atletico-madrid,https://api.sofascore.app/api/v1/team/2836/image,LaLiga,2019/2020
+2824,Real Sociedad,real-sociedad,https://api.sofascore.app/api/v1/team/2824/image,LaLiga,2019/2020
+33779,Granada,granada,https://api.sofascore.app/api/v1/team/33779/image,LaLiga,2019/2020
+2839,Eibar,eibar,https://api.sofascore.app/api/v1/team/2839/image,LaLiga,2019/2020
+2820,Osasuna,osasuna,https://api.sofascore.app/api/v1/team/2820/image,LaLiga,2019/2020
+2831,Real Valladolid,real-valladolid,https://api.sofascore.app/api/v1/team/2831/image,LaLiga,2019/2020
+2819,Villarreal,villarreal,https://api.sofascore.app/api/v1/team/2819/image,LaLiga,2019/2020
+2849,Levante UD,levante-ud,https://api.sofascore.app/api/v1/team/2849/image,LaLiga,2019/2020
+2845,Leganés,leganes,https://api.sofascore.app/api/v1/team/2845/image,LaLiga,2019/2020
+2817,Barcelona,barcelona,https://api.sofascore.app/api/v1/team/2817/image,LaLiga,2019/2020
+2826,Mallorca,mallorca,https://api.sofascore.app/api/v1/team/2826/image,LaLiga,2019/2020
+2833,Sevilla,sevilla,https://api.sofascore.app/api/v1/team/2833/image,LaLiga,2019/2020
+2825,Athletic Club,athletic-club,https://api.sofascore.app/api/v1/team/2825/image,LaLiga,2019/2020
+24265,Huesca,huesca,https://api.sofascore.app/api/v1/team/24265/image,LaLiga,2020/2021
+4488,Cádiz,cadiz,https://api.sofascore.app/api/v1/team/4488/image,LaLiga,2020/2021
+2846,Elche,elche,https://api.sofascore.app/api/v1/team/2846/image,LaLiga,2020/2021
+2818,Rayo Vallecano,rayo-vallecano,https://api.sofascore.app/api/v1/team/2818/image,LaLiga,2021/2022
+24264,Girona FC,girona-fc,https://api.sofascore.app/api/v1/team/24264/image,LaLiga,2022/2023
+2858,Almería,almeria,https://api.sofascore.app/api/v1/team/2858/image,LaLiga,2022/2023
+6577,Las Palmas,las-palmas,https://api.sofascore.app/api/v1/team/6577/image,LaLiga,2023/2024
+3106,Legia Warszawa,legia-warszawa,https://api.sofascore.app/api/v1/team/3106/image,UEFA Champions League,2019/2020
+5194,Klaksvíkar Ítróttarfelag,klaksvikar-itrottarfelag,https://api.sofascore.app/api/v1/team/5194/image,UEFA Champions League,2019/2020
+3398,APOEL Nicosia,apoel-nicosia,https://api.sofascore.app/api/v1/team/3398/image,UEFA Champions League,2019/2020
+2687,Juventus,juventus,https://api.sofascore.app/api/v1/team/2687/image,UEFA Champions League,2019/2020
+1284,FC København,fc-kobenhavn,https://api.sofascore.app/api/v1/team/1284/image,UEFA Champions League,2019/2020
+1899,Valur Reykjavík,valur-reykjavik,https://api.sofascore.app/api/v1/team/1899/image,UEFA Champions League,2019/2020
+3395,Omonia Nicosia,omonia-nicosia,https://api.sofascore.app/api/v1/team/3395/image,UEFA Champions League,2019/2020
+4502,Viktoria Plzeň,viktoria-plzen,https://api.sofascore.app/api/v1/team/4502/image,UEFA Champions League,2019/2020
+25929,CS Fola Esch,cs-fola-esch,https://api.sofascore.app/api/v1/team/25929/image,UEFA Champions League,2019/2020
+43840,Ludogorets,ludogorets,https://api.sofascore.app/api/v1/team/43840/image,UEFA Champions League,2019/2020
+262229,FC Ararat-Armenia,fc-ararat-armenia,https://api.sofascore.app/api/v1/team/262229/image,UEFA Champions League,2019/2020
+8091,Nõmme Kalju,nomme-kalju,https://api.sofascore.app/api/v1/team/8091/image,UEFA Champions League,2019/2020
+2501,Basel,basel,https://api.sofascore.app/api/v1/team/2501/image,UEFA Champions League,2019/2020
+3245,Olympiacos FC,olympiacos-fc,https://api.sofascore.app/api/v1/team/3245/image,UEFA Champions League,2019/2020
+4912,Connah's Quay Nomads,connahs-quay-nomads,https://api.sofascore.app/api/v1/team/4912/image,UEFA Champions League,2019/2020
+1759,Djurgårdens IF,djurgardens-if,https://api.sofascore.app/api/v1/team/1759/image,UEFA Champions League,2019/2020
+3086,Başakşehir FK,basaksehir-fk,https://api.sofascore.app/api/v1/team/3086/image,UEFA Champions League,2019/2020
+5287,CFR 1907 Cluj,cfr-1907-cluj,https://api.sofascore.app/api/v1/team/5287/image,UEFA Champions League,2019/2020
+2055,SK Rapid Wien,sk-rapid-wien,https://api.sofascore.app/api/v1/team/2055/image,UEFA Champions League,2019/2020
+36155,Astana,astana,https://api.sofascore.app/api/v1/team/36155/image,UEFA Champions League,2019/2020
+2686,Atalanta,atalanta,https://api.sofascore.app/api/v1/team/2686/image,UEFA Champions League,2019/2020
+162368,Riga FC,riga-fc,https://api.sofascore.app/api/v1/team/162368/image,UEFA Champions League,2019/2020
+5407,FK Sileks Kratovo,fk-sileks-kratovo,https://api.sofascore.app/api/v1/team/5407/image,UEFA Champions League,2019/2020
+5207,F91 Dudelange,f91-dudelange,https://api.sofascore.app/api/v1/team/5207/image,UEFA Champions League,2019/2020
+5173,Sheriff Tiraspol,sheriff,https://api.sofascore.app/api/v1/team/5173/image,UEFA Champions League,2019/2020
+2888,Club Brugge KV,club-brugge-kv,https://api.sofascore.app/api/v1/team/2888/image,UEFA Champions League,2019/2020
+2420,NK Maribor,nk-maribor,https://api.sofascore.app/api/v1/team/2420/image,UEFA Champions League,2019/2020
+5187,HB Tórshavn,havnar-boltfelag,https://api.sofascore.app/api/v1/team/5187/image,UEFA Champions League,2019/2020
+116312,FC Iberia 1999,fc-iberia-1999,https://api.sofascore.app/api/v1/team/116312/image,UEFA Champions League,2019/2020
+1649,Olympique Lyonnais,olympique-lyonnais,https://api.sofascore.app/api/v1/team/1649/image,UEFA Champions League,2019/2020
+4921,The New Saints,the-new-saints,https://api.sofascore.app/api/v1/team/4921/image,UEFA Champions League,2019/2020
+2413,NK Celje,nk-celje,https://api.sofascore.app/api/v1/team/2413/image,UEFA Champions League,2019/2020
+1161,Rosenborg BK,rosenborg-bk,https://api.sofascore.app/api/v1/team/1161/image,UEFA Champions League,2019/2020
+1925,Ferencváros TC,ferencvaros-tc,https://api.sofascore.app/api/v1/team/1925/image,UEFA Champions League,2019/2020
+2404,ŠK Slovan Bratislava,sk-slovan-bratislava,https://api.sofascore.app/api/v1/team/2404/image,UEFA Champions League,2019/2020
+2953,AFC Ajax,ajax,https://api.sofascore.app/api/v1/team/2953/image,UEFA Champions League,2019/2020
+5171,Dinamo Tbilisi,dinamo-tbilisi,https://api.sofascore.app/api/v1/team/5171/image,UEFA Champions League,2019/2020
+3251,PAOK,paok,https://api.sofascore.app/api/v1/team/3251/image,UEFA Champions League,2019/2020
+2032,GNK Dinamo Zagreb,gnk-dinamo-zagreb,https://api.sofascore.app/api/v1/team/2032/image,UEFA Champions League,2019/2020
+229755,FC Drita,fc-drita,https://api.sofascore.app/api/v1/team/229755/image,UEFA Champions League,2019/2020
+5272,Linfield FC,linfield-fc,https://api.sofascore.app/api/v1/team/5272/image,UEFA Champions League,2019/2020
+36195,SP Tre Fiori,sp-tre-fiori,https://api.sofascore.app/api/v1/team/36195/image,UEFA Champions League,2019/2020
+5962,Qarabağ,qarabag,https://api.sofascore.app/api/v1/team/5962/image,UEFA Champions League,2019/2020
+2321,Zenit St. Petersburg,zenit-st-petersburg,https://api.sofascore.app/api/v1/team/2321/image,UEFA Champions League,2019/2020
+2242,HJK,hjk,https://api.sofascore.app/api/v1/team/2242/image,UEFA Champions League,2019/2020
+1644,Paris Saint-Germain,paris-saint-germain,https://api.sofascore.app/api/v1/team/1644/image,UEFA Champions League,2019/2020
+2352,Celtic,celtic,https://api.sofascore.app/api/v1/team/2352/image,UEFA Champions League,2019/2020
+1764,AIK,aik,https://api.sofascore.app/api/v1/team/1764/image,UEFA Champions League,2019/2020
+5143,FK Budućnost Podgorica,fk-buducnost-podgorica,https://api.sofascore.app/api/v1/team/5143/image,UEFA Champions League,2019/2020
+3346,Flora Tallinn,flora-tallinn,https://api.sofascore.app/api/v1/team/3346/image,UEFA Champions League,2019/2020
+7711,FC Santa Coloma,fc-santa-coloma,https://api.sofascore.app/api/v1/team/7711/image,UEFA Champions League,2019/2020
+5237,FK Sarajevo,fk-sarajevo,https://api.sofascore.app/api/v1/team/5237/image,UEFA Champions League,2019/2020
+2244,KuPS,kups,https://api.sofascore.app/api/v1/team/2244/image,UEFA Champions League,2019/2020
+37946,Inter Club d'Escaldes,inter-club-descaldes,https://api.sofascore.app/api/v1/team/37946/image,UEFA Champions League,2019/2020
+2216,SK Slavia Praha,slavia-praha,https://api.sofascore.app/api/v1/team/2216/image,UEFA Champions League,2019/2020
+3002,FC Porto,fc-porto,https://api.sofascore.app/api/v1/team/3002/image,UEFA Champions League,2019/2020
+2445,Young Boys,young-boys,https://api.sofascore.app/api/v1/team/2445/image,UEFA Champions League,2019/2020
+5198,Maccabi Tel Aviv,maccabi-tel-aviv,https://api.sofascore.app/api/v1/team/5198/image,UEFA Champions League,2019/2020
+126304,Lincoln Red Imps,lincoln-red-imps,https://api.sofascore.app/api/v1/team/126304/image,UEFA Champions League,2019/2020
+3353,Dynamo Brest,dynamo-brest,https://api.sofascore.app/api/v1/team/3353/image,UEFA Champions League,2019/2020
+3006,Benfica,benfica,https://api.sofascore.app/api/v1/team/3006/image,UEFA Champions League,2019/2020
+3313,Shakhtar Donetsk,shakhtar-donetsk,https://api.sofascore.app/api/v1/team/3313/image,UEFA Champions League,2019/2020
+229757,FC Feronikeli 74,kf-feronikeli-74,https://api.sofascore.app/api/v1/team/229757/image,UEFA Champions League,2019/2020
+661,Molde FK,molde-fk,https://api.sofascore.app/api/v1/team/661/image,UEFA Champions League,2019/2020
+5332,Valletta FC,valletta-fc,https://api.sofascore.app/api/v1/team/5332/image,UEFA Champions League,2019/2020
+5413,KF Shkëndija,kf-shkendija,https://api.sofascore.app/api/v1/team/5413/image,UEFA Champions League,2019/2020
+2950,AZ Alkmaar,az-alkmaar,https://api.sofascore.app/api/v1/team/2950/image,UEFA Champions League,2019/2020
+2890,KRC Genk,krc-genk,https://api.sofascore.app/api/v1/team/2890/image,UEFA Champions League,2019/2020
+5149,FK Crvena zvezda,fk-crvena-zvezda,https://api.sofascore.app/api/v1/team/5149/image,UEFA Champions League,2019/2020
+2681,Bayer 04 Leverkusen,bayer-04-leverkusen,https://api.sofascore.app/api/v1/team/2681/image,UEFA Champions League,2019/2020
+5195,KF Tirana,kf-tirana,https://api.sofascore.app/api/v1/team/5195/image,UEFA Champions League,2019/2020
+2058,LASK,lask,https://api.sofascore.app/api/v1/team/2058/image,UEFA Champions League,2019/2020
+2673,Borussia Dortmund,borussia-dortmund,https://api.sofascore.app/api/v1/team/2673/image,UEFA Champions League,2019/2020
+2672,FC Bayern München,fc-bayern-munchen,https://api.sofascore.app/api/v1/team/2672/image,UEFA Champions League,2019/2020
+3050,Beşiktaş,besiktas,https://api.sofascore.app/api/v1/team/3050/image,UEFA Champions League,2019/2020
+37862,SP Tre Penne,sp-tre-penne,https://api.sofascore.app/api/v1/team/37862/image,UEFA Champions League,2019/2020
+3305,Dynamo Kyiv,dynamo-kyiv,https://api.sofascore.app/api/v1/team/3305/image,UEFA Champions League,2019/2020
+3350,BATE Borisov,bate-borisov,https://api.sofascore.app/api/v1/team/3350/image,UEFA Champions League,2019/2020
+2320,Lokomotiv Moscow,lokomotiv-moscow,https://api.sofascore.app/api/v1/team/2320/image,UEFA Champions League,2019/2020
+3061,Galatasaray,galatasaray,https://api.sofascore.app/api/v1/team/3061/image,UEFA Champions League,2019/2020
+36246,NK Lokomotiva Zagreb,nk-lokomotiva-zagreb,https://api.sofascore.app/api/v1/team/36246/image,UEFA Champions League,2019/2020
+2952,PSV Eindhoven,psv-eindhoven,https://api.sofascore.app/api/v1/team/2952/image,UEFA Champions League,2019/2020
+2697,Inter,inter,https://api.sofascore.app/api/v1/team/2697/image,UEFA Champions League,2019/2020
+33584,Floriana FC,floriana-fc,https://api.sofascore.app/api/v1/team/33584/image,UEFA Champions League,2019/2020
+34425,FK Krasnodar,fc-krasnodar,https://api.sofascore.app/api/v1/team/34425/image,UEFA Champions League,2019/2020
+2046,Red Bull Salzburg,red-bull-salzburg,https://api.sofascore.app/api/v1/team/2046/image,UEFA Champions League,2019/2020
+5222,FK Partizani,fk-partizani,https://api.sofascore.app/api/v1/team/5222/image,UEFA Champions League,2019/2020
+6224,FK Sutjeska Nikšić,fk-sutjeska-niksic,https://api.sofascore.app/api/v1/team/6224/image,UEFA Champions League,2019/2020
+126298,Europa FC,europa-fc,https://api.sofascore.app/api/v1/team/126298/image,UEFA Champions League,2019/2020
+36360,RB Leipzig,rb-leipzig,https://api.sofascore.app/api/v1/team/36360/image,UEFA Champions League,2019/2020
+1902,KR Reykjavík,kr-reykjavik,https://api.sofascore.app/api/v1/team/1902/image,UEFA Champions League,2019/2020
+7918,Piast Gliwice,piast-gliwice,https://api.sofascore.app/api/v1/team/7918/image,UEFA Champions League,2019/2020
+1643,Lille,lille,https://api.sofascore.app/api/v1/team/1643/image,UEFA Champions League,2019/2020
+2714,Napoli,napoli,https://api.sofascore.app/api/v1/team/2714/image,UEFA Champions League,2019/2020
+5152,FK Partizan,fk-partizan,https://api.sofascore.app/api/v1/team/5152/image,UEFA Champions League,2019/2020
+3179,Dundalk FC,dundalk-fc,https://api.sofascore.app/api/v1/team/3179/image,UEFA Champions League,2019/2020
+5343,FK Sūduva Marijampolė,fk-suduva-marijampole,https://api.sofascore.app/api/v1/team/5343/image,UEFA Champions League,2019/2020
+1658,Stade Rennais,stade-rennais,https://api.sofascore.app/api/v1/team/1658/image,UEFA Champions League,2020/2021
+2699,Lazio,lazio,https://api.sofascore.app/api/v1/team/2699/image,UEFA Champions League,2020/2021
+2527,Borussia M'gladbach,borussia-mgladbach,https://api.sofascore.app/api/v1/team/2527/image,UEFA Champions League,2020/2021
+1641,Olympique de Marseille,olympique-de-marseille,https://api.sofascore.app/api/v1/team/1641/image,UEFA Champions League,2020/2021
+1289,FC Midtjylland,fc-midtjylland,https://api.sofascore.app/api/v1/team/1289/image,UEFA Champions League,2020/2021
+2903,KAA Gent,kaa-gent,https://api.sofascore.app/api/v1/team/2903/image,UEFA Champions League,2020/2021
+37863,SS Folgore / Falciano,ss-folgore-falciano,https://api.sofascore.app/api/v1/team/37863/image,UEFA Champions League,2021/2022
+229752,FC Prishtina,fc-prishtina,https://api.sofascore.app/api/v1/team/229752/image,UEFA Champions League,2021/2022
+3177,Shamrock Rovers,shamrock-rovers,https://api.sofascore.app/api/v1/team/3177/image,UEFA Champions League,2021/2022
+213357,NŠ Mura,ns-mura,https://api.sofascore.app/api/v1/team/213357/image,UEFA Champions League,2021/2022
+5345,FK Žalgiris,fk-zalgiris,https://api.sofascore.app/api/v1/team/5345/image,UEFA Champions League,2021/2022
+5172,Kairat Almaty,kairat-almaty,https://api.sofascore.app/api/v1/team/5172/image,UEFA Champions League,2021/2022
+1892,Malmö FF,malmo-ff,https://api.sofascore.app/api/v1/team/1892/image,UEFA Champions League,2021/2022
+5331,Hibernians,hibernians,https://api.sofascore.app/api/v1/team/5331/image,UEFA Champions League,2021/2022
+67966,FC Alashkert,fc-alashkert,https://api.sofascore.app/api/v1/team/67966/image,UEFA Champions League,2021/2022
+2524,VfL Wolfsburg,vfl-wolfsburg,https://api.sofascore.app/api/v1/team/2524/image,UEFA Champions League,2021/2022
+2351,Rangers,rangers,https://api.sofascore.app/api/v1/team/2351/image,UEFA Champions League,2021/2022
+1653,AS Monaco,as-monaco,https://api.sofascore.app/api/v1/team/1653/image,UEFA Champions League,2021/2022
+5417,KF Teuta Durrës,kf-teuta-durres,https://api.sofascore.app/api/v1/team/5417/image,UEFA Champions League,2021/2022
+2692,Milan,milan,https://api.sofascore.app/api/v1/team/2692/image,UEFA Champions League,2021/2022
+5215,Neftçi Baku PFK,neftci-baku-pfk,https://api.sofascore.app/api/v1/team/5215/image,UEFA Champions League,2021/2022
+2218,AC Sparta Praha,sparta-praha,https://api.sofascore.app/api/v1/team/2218/image,UEFA Champions League,2021/2022
+656,Bodø/Glimt,bodoglimt,https://api.sofascore.app/api/v1/team/656/image,UEFA Champions League,2021/2022
+5235,FK Borac Banja Luka,fk-borac-banja-luka,https://api.sofascore.app/api/v1/team/5235/image,UEFA Champions League,2021/2022
+3357,Shakhtyor Soligorsk,shakhtyor-soligorsk,https://api.sofascore.app/api/v1/team/3357/image,UEFA Champions League,2021/2022
+2323,FC Spartak Moscow,fc-spartak-moscow,https://api.sofascore.app/api/v1/team/2323/image,UEFA Champions League,2021/2022
+5197,Maccabi Haifa,maccabi-haifa,https://api.sofascore.app/api/v1/team/5197/image,UEFA Champions League,2021/2022
+3001,Sporting,sporting,https://api.sofascore.app/api/v1/team/3001/image,UEFA Champions League,2021/2022
+1281,Brøndby IF,brondby-if,https://api.sofascore.app/api/v1/team/1281/image,UEFA Champions League,2021/2022
+3052,Fenerbahçe,fenerbahce,https://api.sofascore.app/api/v1/team/3052/image,UEFA Champions League,2022/2023
+230417,KF Ballkani,kf-ballkani,https://api.sofascore.app/api/v1/team/230417/image,UEFA Champions League,2022/2023
+5178,HŠK Zrinjski Mostar,hsk-zrinjski-mostar,https://api.sofascore.app/api/v1/team/5178/image,UEFA Champions League,2022/2023
+3402,Apollon Limassol,apollon-limassol,https://api.sofascore.app/api/v1/team/3402/image,UEFA Champions League,2022/2023
+2674,Eintracht Frankfurt,eintracht-frankfurt,https://api.sofascore.app/api/v1/team/2674/image,UEFA Champions League,2022/2023
+3051,Trabzonspor,trabzonspor,https://api.sofascore.app/api/v1/team/3051/image,UEFA Champions League,2022/2023
+2051,SK Sturm Graz,sk-sturm-graz,https://api.sofascore.app/api/v1/team/2051/image,UEFA Champions League,2022/2023
+2450,FC Zürich,fc-zurich,https://api.sofascore.app/api/v1/team/2450/image,UEFA Champions League,2022/2023
+4860,Royale Union Saint-Gilloise,royale-union-saint-gilloise,https://api.sofascore.app/api/v1/team/4860/image,UEFA Champions League,2022/2023
+3404,AEK Larnaca,aek-larnaca,https://api.sofascore.app/api/v1/team/3404/image,UEFA Champions League,2022/2023
+1908,Víkingur Reykjavík,vikingur-reykjavik,https://api.sofascore.app/api/v1/team/1908/image,UEFA Champions League,2022/2023
+5214,Pyunik Yerevan,pyunik-yerevan,https://api.sofascore.app/api/v1/team/5214/image,UEFA Champions League,2022/2023
+68718,RFS,rfs,https://api.sofascore.app/api/v1/team/68718/image,UEFA Champions League,2022/2023
+3121,Lech Poznań,lech-poznan,https://api.sofascore.app/api/v1/team/3121/image,UEFA Champions League,2022/2023
+37297,Dinamo Batumi,dinamo-batumi,https://api.sofascore.app/api/v1/team/37297/image,UEFA Champions League,2022/2023
+37860,La Fiorita,la-fiorita,https://api.sofascore.app/api/v1/team/37860/image,UEFA Champions League,2022/2023
+5362,FC Tobol,fc-tobol,https://api.sofascore.app/api/v1/team/5362/image,UEFA Champions League,2022/2023
+136548,KF Shkupi,kf-shkupi,https://api.sofascore.app/api/v1/team/136548/image,UEFA Champions League,2022/2023
+3342,FCI Levadia Tallinn,fci-levadia-tallinn,https://api.sofascore.app/api/v1/team/3342/image,UEFA Champions League,2022/2023
+2889,Royal Antwerp FC,royal-antwerp-fc,https://api.sofascore.app/api/v1/team/2889/image,UEFA Champions League,2023/2024
+35268,Raków Częstochowa,rakow-czestochowa,https://api.sofascore.app/api/v1/team/35268/image,UEFA Champions League,2023/2024
+259121,FC Struga Trim & Lum,fc-struga-trim-and-lum,https://api.sofascore.app/api/v1/team/259121/image,UEFA Champions League,2023/2024
+3294,FC Farul Constanța,fcv-farul-constanta,https://api.sofascore.app/api/v1/team/3294/image,UEFA Champions League,2023/2024
+5353,Valmiera FC,valmiera-fc,https://api.sofascore.app/api/v1/team/5353/image,UEFA Champions League,2023/2024
+2416,NK Olimpija Ljubljana,nk-olimpija-ljubljana,https://api.sofascore.app/api/v1/team/2416/image,UEFA Champions League,2023/2024
+263360,FK TSC Bačka Topola,fk-tsc-backa-topola,https://api.sofascore.app/api/v1/team/263360/image,UEFA Champions League,2023/2024
+2448,Servette FC,servette-fc,https://api.sofascore.app/api/v1/team/2448/image,UEFA Champions League,2023/2024
+33583,Ħamrun Spartans FC,hamrun-spartans-fc,https://api.sofascore.app/api/v1/team/33583/image,UEFA Champions League,2023/2024
+3397,Aris Limassol,aris-limassol,https://api.sofascore.app/api/v1/team/3397/image,UEFA Champions League,2023/2024
+1760,BK Häcken,bk-hacken,https://api.sofascore.app/api/v1/team/1760/image,UEFA Champions League,2023/2024
+37962,Atlètic Club Escaldes,atletic-club-escaldes,https://api.sofascore.app/api/v1/team/37962/image,UEFA Champions League,2023/2024
+1901,Breidablik Kópavogur,breidablik-kopavogur,https://api.sofascore.app/api/v1/team/1901/image,UEFA Champions League,2023/2024
+1648,RC Lens,rc-lens,https://api.sofascore.app/api/v1/team/1648/image,UEFA Champions League,2023/2024
+2999,Sporting Braga,sporting-braga,https://api.sofascore.app/api/v1/team/2999/image,UEFA Champions League,2023/2024
+258537,SC Dnipro-1,sc-dnipro-1,https://api.sofascore.app/api/v1/team/258537/image,UEFA Champions League,2023/2024
+5382,Swift Hesperange,swift-hesperange,https://api.sofascore.app/api/v1/team/5382/image,UEFA Champions League,2023/2024
+2959,Feyenoord,feyenoord,https://api.sofascore.app/api/v1/team/2959/image,UEFA Champions League,2023/2024
+2547,1. FC Union Berlin,1-fc-union-berlin,https://api.sofascore.app/api/v1/team/2547/image,UEFA Champions League,2023/2024
+3250,AEK Athens,aek-athens,https://api.sofascore.app/api/v1/team/3250/image,UEFA Champions League,2023/2024
+5184,Larne FC,larne-fc,https://api.sofascore.app/api/v1/team/5184/image,UEFA Champions League,2023/2024
+3248,Panathinaikos,panathinaikos,https://api.sofascore.app/api/v1/team/3248/image,UEFA Champions League,2023/2024
+5225,Urartu,urartu,https://api.sofascore.app/api/v1/team/5225/image,UEFA Champions League,2023/2024
+7605,Differdange FC 03,differdange-fc-03,https://api.sofascore.app/api/v1/team/7605/image,UEFA Champions League,2024/2025
+2685,Bologna,bologna,https://api.sofascore.app/api/v1/team/2685/image,UEFA Champions League,2024/2025
+2443,FC Lugano,fc-lugano,https://api.sofascore.app/api/v1/team/2443/image,UEFA Champions League,2024/2025
+192763,FK Panevėžys,fk-panevezys,https://api.sofascore.app/api/v1/team/192763/image,UEFA Champions League,2024/2025
+3301,FCSB,fcsb,https://api.sofascore.app/api/v1/team/3301/image,UEFA Champions League,2024/2025
+7691,Jagiellonia Białystok,jagiellonia-bialystok,https://api.sofascore.app/api/v1/team/7691/image,UEFA Champions League,2024/2025
+2955,FC Twente,fc-twente,https://api.sofascore.app/api/v1/team/2955/image,UEFA Champions League,2024/2025
+5366,FC Ordabasy,fc-ordabasy,https://api.sofascore.app/api/v1/team/5366/image,UEFA Champions League,2024/2025
+3361,Dinamo Minsk,dinamo-minsk,https://api.sofascore.app/api/v1/team/3361/image,UEFA Champions League,2024/2025
+264619,KF Egnatia,ks-egnatia,https://api.sofascore.app/api/v1/team/264619/image,UEFA Champions League,2024/2025
+167232,FC Petrocub Hîncesti,fc-petrocub-hincesti,https://api.sofascore.app/api/v1/team/167232/image,UEFA Champions League,2024/2025
+37949,UE Santa Coloma,ue-santa-coloma,https://api.sofascore.app/api/v1/team/37949/image,UEFA Champions League,2024/2025
+36261,SS Virtus,ss-virtus,https://api.sofascore.app/api/v1/team/36261/image,UEFA Champions League,2024/2025
+2677,VfB Stuttgart,vfb-stuttgart,https://api.sofascore.app/api/v1/team/2677/image,UEFA Champions League,2024/2025
+6226,FK Dečić Tuzi,fk-decic-tuzi,https://api.sofascore.app/api/v1/team/6226/image,UEFA Champions League,2024/2025
+1715,Stade Brestois,stade-brestois,https://api.sofascore.app/api/v1/team/1715/image,UEFA Champions League,2024/2025
