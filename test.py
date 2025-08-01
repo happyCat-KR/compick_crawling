@@ -7,7 +7,7 @@ from datetime import datetime
 import pandas as pd
 
 # ✅ 날짜 설정
-target_date = "2025-05-25"
+target_date = "2024-07-30"
 
 # ✅ 크롬 드라이버 설정
 options = Options()
@@ -32,23 +32,26 @@ league_country_map = {
     "UEFA Champions League": "Europe"
 }
 
-# ✅ 대상 리그만 필터
-target_leagues = league_country_map.keys()
 events = data.get("events", [])
-
-# ✅ CSV 저장용 리스트
 csv_rows = []
 
 for e in events:
     league_name = e['tournament']['name']
     country_name = e['tournament']['category']['name']
 
-    # ✅ 리그명이 일치하고, 해당 리그에 대한 정확한 국가명이 일치할 때만 포함
-    if league_name not in target_leagues:
-        continue
-    if league_country_map[league_name] != country_name:
+    # ✅ 챔피언스리그는 앞글자 시작으로 필터링
+    if league_name.startswith("UEFA Champions League"):
+        if country_name != league_country_map["UEFA Champions League"]:
+            continue
+
+    # ✅ 다른 리그는 정확히 일치할 때만 필터링
+    elif league_name in league_country_map:
+        if league_country_map[league_name] != country_name:
+            continue
+    else:
         continue
 
+    # ✅ 경기 정보 추출
     match_id = e['id']
     home_name = e['homeTeam']['name']
     away_name = e['awayTeam']['name']

@@ -6,8 +6,8 @@ import json
 import pymysql
 from datetime import datetime, timedelta
 
-# ✅ 날짜 범위 설정
-start_date = datetime.strptime("2019-07-01", "%Y-%m-%d")
+# ✅ 날짜 범위 설정 (19/20 시즌 ~ 24/25 시즌 종료 예상일)
+start_date = datetime.strptime("2023-01-28", "%Y-%m-%d")
 end_date = datetime.strptime("2025-06-30", "%Y-%m-%d")
 
 # ✅ 크롬 드라이버 설정
@@ -30,6 +30,8 @@ cursor = conn.cursor()
 
 # ✅ 리그-국가 매핑 정의
 league_country_map = {
+    "Premier League": "England",
+    "LaLiga": "Spain",
     "UEFA Champions League": "Europe"
 }
 target_leagues = league_country_map.keys()
@@ -72,10 +74,10 @@ while current_date <= end_date:
             league_name = e['tournament']['name']
             country_name = e['tournament']['category']['name']
 
-            if league_name.startswith("UEFA Champions League"):
-                if country_name != league_country_map["UEFA Champions League"]:
-                    continue
-            else:
+            # ✅ 리그 + 국가 정확히 일치하는 경우만 진행
+            if league_name not in target_leagues:
+                continue
+            if league_country_map[league_name] != country_name:
                 continue
 
             match_id = e['id']
@@ -83,8 +85,7 @@ while current_date <= end_date:
             away_name = e['awayTeam']['name']
             start_ts = datetime.fromtimestamp(e['startTimestamp'])
 
-            # ✅ 앞글자 기준 league_id 매핑
-            league_id = next((lid for name, lid in league_map.items() if league_name.startswith(name)), None)
+            league_id = league_map.get(league_name)
             home_id = team_map.get(home_name)
             away_id = team_map.get(away_name)
 

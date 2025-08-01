@@ -64,4 +64,4 @@ unique_df = df.drop_duplicates(subset=["team_id"]).reset_index(drop=True)
 
 # ✅ 저장
 unique_df.to_csv("all_unique_teams_2019_2025.csv", index=False, encoding="utf-8-sig")
-print(f"✅ 저장 완료: all_unique_teams_2019_2025.csv (총 {len(unique_df)}팀)")
+print(f"✅ 저장 완료: all_unique_teams_2019_2025_0801.csv (총 {len(unique_df)}팀)")
