@@ -22,28 +22,13 @@ league_map = {
 }
 season_ids = {
     "Premier League": {
-        "2019/2020": 23776,
-        "2020/2021": 29415,
-        "2021/2022": 37036,
-        "2022/2023": 41886,
-        "2023/2024": 52186,
-        "2024/2025": 61627
+        "2025/2026": 76986
     },
     "LaLiga": {
-        "2019/2020": 24127,
-        "2020/2021": 32501,
-        "2021/2022": 37223,
-        "2022/2023": 42409,
-        "2023/2024": 52376,
-        "2024/2025": 61643
+        "2025/2026": 77559
     },
     "UEFA Champions League": {
-        "2019/2020": 23766,
-        "2020/2021": 29267,
-        "2021/2022": 36886,
-        "2022/2023": 41897,
-        "2023/2024": 52162,
-        "2024/2025": 61644
+        "2025/2026": 76953
     }
 }
 
@@ -75,7 +60,10 @@ df = pd.DataFrame(all_teams)
 df_unique = df.drop_duplicates(subset=["team_name"]).reset_index(drop=True)
 df_selected = df_unique[['team_id', 'team_name', 'image_url']]
 
-# ✅ DB 저장
+# ✅ DB 저장 (덮어쓰기 방식: UPDATE or INSERT)
+inserted_count = 0
+updated_count = 0
+
 try:
     conn = pymysql.connect(
         host='localhost',
@@ -86,15 +74,25 @@ try:
     )
     cursor = conn.cursor()
     for _, row in df_selected.iterrows():
-        cursor.execute("""
-            INSERT INTO team_info (team_id, team_name, image_url)
-            VALUES (%s, %s, %s)
-            ON DUPLICATE KEY UPDATE
-                team_name = VALUES(team_name),
-                image_url = VALUES(image_url)
-        """, (row['team_id'], row['team_name'], row['image_url']))
+        cursor.execute("SELECT 1 FROM team_info WHERE team_id = %s", (row['team_id'],))
+        exists = cursor.fetchone()
+        if exists:
+            cursor.execute("""
+                UPDATE team_info
+                SET team_name = %s, image_url = %s
+                WHERE team_id = %s
+            """, (row['team_name'], row['image_url'], row['team_id']))
+            updated_count += 1
+        else:
+            cursor.execute("""
+                INSERT INTO team_info (team_id, team_name, image_url)
+                VALUES (%s, %s, %s)
+            """, (row['team_id'], row['team_name'], row['image_url']))
+            inserted_count += 1
+
     conn.commit()
-    print(f"✅ DB 저장 완료: {len(df_selected)}개 팀")
+    print(f"✅ 새로 삽입된 팀 수: {inserted_count}개")
+    print(f"🔄 업데이트된 팀 수: {updated_count}개")
 except Exception as e:
     print(f"❌ DB 저장 오류: {e}")
 finally:

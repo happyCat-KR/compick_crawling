@@ -6,9 +6,12 @@ import json
 import pymysql
 from datetime import datetime, timedelta
 
-# ✅ 날짜 범위 설정
-start_date = datetime.strptime("2019-07-01", "%Y-%m-%d")
-end_date = datetime.strptime("2025-06-30", "%Y-%m-%d")
+# ✅ 날짜 범위 자동 설정 (오늘 ~ 오늘+14일)
+# ✅ 날짜 범위 수동 설정
+start_date = datetime.strptime("2025-05-01", "%Y-%m-%d")
+end_date = datetime.strptime("2025-08-20", "%Y-%m-%d")
+
+print(f"📆 수집 범위: {start_date.strftime('%Y-%m-%d')} ~ {end_date.strftime('%Y-%m-%d')}")
 
 # ✅ 크롬 드라이버 설정
 options = Options()
@@ -30,9 +33,10 @@ cursor = conn.cursor()
 
 # ✅ 리그-국가 매핑 정의
 league_country_map = {
-    "UEFA Champions League": "Europe"
+    "UEFA Champions League": "Europe",
+    "Premier League": "England",
+    "LaLiga": "Spain"
 }
-target_leagues = league_country_map.keys()
 
 # ✅ 리그명 → ID 매핑
 cursor.execute("SELECT id, league_name FROM league")
@@ -42,7 +46,7 @@ league_map = {name: lid for lid, name in cursor.fetchall()}
 cursor.execute("SELECT team_id, team_name FROM team_info")
 team_map = {name: tid for tid, name in cursor.fetchall()}
 
-# ✅ INSERT SQL
+# ✅ INSERT SQL (덮어쓰기 방식)
 insert_sql = """
 INSERT INTO matches (id, league_id, home_team_id, away_team_id, start_time)
 VALUES (%s, %s, %s, %s, %s)
@@ -72,8 +76,12 @@ while current_date <= end_date:
             league_name = e['tournament']['name']
             country_name = e['tournament']['category']['name']
 
+            # ✅ 리그-국가 필터링
             if league_name.startswith("UEFA Champions League"):
                 if country_name != league_country_map["UEFA Champions League"]:
+                    continue
+            elif league_name in league_country_map:
+                if country_name != league_country_map[league_name]:
                     continue
             else:
                 continue
@@ -83,7 +91,7 @@ while current_date <= end_date:
             away_name = e['awayTeam']['name']
             start_ts = datetime.fromtimestamp(e['startTimestamp'])
 
-            # ✅ 앞글자 기준 league_id 매핑
+            # ✅ 리그 ID 매핑
             league_id = next((lid for name, lid in league_map.items() if league_name.startswith(name)), None)
             home_id = team_map.get(home_name)
             away_id = team_map.get(away_name)

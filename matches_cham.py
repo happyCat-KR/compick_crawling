@@ -7,7 +7,7 @@ import pymysql
 from datetime import datetime, timedelta
 
 # ✅ 날짜 범위 설정 (19/20 시즌 ~ 24/25 시즌 종료 예상일)
-start_date = datetime.strptime("2023-01-28", "%Y-%m-%d")
+start_date = datetime.strptime("2019-07-01", "%Y-%m-%d")
 end_date = datetime.strptime("2025-06-30", "%Y-%m-%d")
 
 # ✅ 크롬 드라이버 설정
@@ -30,8 +30,6 @@ cursor = conn.cursor()
 
 # ✅ 리그-국가 매핑 정의
 league_country_map = {
-    "Premier League": "England",
-    "LaLiga": "Spain",
     "UEFA Champions League": "Europe"
 }
 target_leagues = league_country_map.keys()

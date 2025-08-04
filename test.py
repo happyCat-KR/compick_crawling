@@ -3,11 +3,13 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 import time
 import json
-from datetime import datetime
-import pandas as pd
+import pymysql
+from datetime import datetime, timedelta
 
-# ✅ 날짜 설정
-target_date = "2024-07-30"
+# ✅ 날짜 범위 자동 설정 (오늘 ~ 오늘+14일)
+start_date = datetime.strptime("2025-05-01", "%Y-%m-%d")
+end_date = datetime.strptime("2025-08-18", "%Y-%m-%d")
+print(f"📆 수집 범위: {start_date.strftime('%Y-%m-%d')} ~ {end_date.strftime('%Y-%m-%d')}")
 
 # ✅ 크롬 드라이버 설정
 options = Options()
@@ -17,57 +19,97 @@ options.add_argument("--no-sandbox")
 service = Service("C:/Users/BIT/Desktop/chromedriver-win64/chromedriver.exe")
 driver = webdriver.Chrome(service=service, options=options)
 
-# ✅ Sofascore API 호출
-url = f"https://api.sofascore.com/api/v1/sport/football/scheduled-events/{target_date}"
-driver.get(url)
-time.sleep(3)
-body = driver.find_element("tag name", "pre").text
-data = json.loads(body)
-driver.quit()
+# ✅ DB 연결
+conn = pymysql.connect(
+    host='localhost',
+    user='root',
+    password='1234',
+    database='compick_project_db',
+    charset='utf8mb4'
+)
+cursor = conn.cursor()
 
-# ✅ 리그-국가 매핑
+# ✅ 리그-국가 매핑 정의
 league_country_map = {
+    "UEFA Champions League": "Europe",
     "Premier League": "England",
-    "LaLiga": "Spain",
-    "UEFA Champions League": "Europe"
+    "LaLiga": "Spain"
 }
 
-events = data.get("events", [])
-csv_rows = []
+# ✅ 리그명 → ID 매핑
+cursor.execute("SELECT id, league_name FROM league")
+league_map = {name: lid for lid, name in cursor.fetchall()}
 
-for e in events:
-    league_name = e['tournament']['name']
-    country_name = e['tournament']['category']['name']
+# ✅ 팀명 → ID 매핑
+cursor.execute("SELECT team_id, team_name FROM team_info")
+team_map = {name: tid for tid, name in cursor.fetchall()}
 
-    # ✅ 챔피언스리그는 앞글자 시작으로 필터링
-    if league_name.startswith("UEFA Champions League"):
-        if country_name != league_country_map["UEFA Champions League"]:
-            continue
+# ✅ INSERT SQL (덮어쓰기 방식)
+insert_sql = """
+INSERT INTO matches (id, league_id, home_team_id, away_team_id, start_time)
+VALUES (%s, %s, %s, %s, %s)
+ON DUPLICATE KEY UPDATE
+    league_id = VALUES(league_id),
+    home_team_id = VALUES(home_team_id),
+    away_team_id = VALUES(away_team_id),
+    start_time = VALUES(start_time)
+"""
 
-    # ✅ 다른 리그는 정확히 일치할 때만 필터링
-    elif league_name in league_country_map:
-        if league_country_map[league_name] != country_name:
-            continue
-    else:
-        continue
+inserted_count = 0
+current_date = start_date
 
-    # ✅ 경기 정보 추출
-    match_id = e['id']
-    home_name = e['homeTeam']['name']
-    away_name = e['awayTeam']['name']
-    start_ts = datetime.fromtimestamp(e['startTimestamp'])
+while current_date <= end_date:
+    date_str = current_date.strftime("%Y-%m-%d")
+    print(f"📅 처리 중: {date_str}")
 
-    csv_rows.append({
-        "match_id": match_id,
-        "league_name": league_name,
-        "country_name": country_name,
-        "home_team": home_name,
-        "away_team": away_name,
-        "start_time": start_ts
-    })
+    try:
+        url = f"https://api.sofascore.com/api/v1/sport/football/scheduled-events/{date_str}"
+        driver.get(url)
+        time.sleep(1.5)
+        body = driver.find_element("tag name", "pre").text
+        data = json.loads(body)
 
-# ✅ pandas로 CSV 저장
-df = pd.DataFrame(csv_rows)
-df.to_csv(f"matches_{target_date}.csv", index=False, encoding="utf-8-sig")
+        events = data.get("events", [])
+        for e in events:
+            league_name = e['tournament']['name']
+            country_name = e['tournament']['category']['name']
 
-print(f"✅ CSV 저장 완료: matches_{target_date}.csv ({len(df)}개 경기)")
+            # ✅ 리그-국가 필터링
+            if league_name.startswith("UEFA Champions League"):
+                if country_name != league_country_map["UEFA Champions League"]:
+                    continue
+            elif league_name in league_country_map:
+                if country_name != league_country_map[league_name]:
+                    continue
+            else:
+                continue
+
+            match_id = e['id']
+            home_name = e['homeTeam']['name']
+            away_name = e['awayTeam']['name']
+            start_ts = datetime.fromtimestamp(e['startTimestamp'])
+
+            # ✅ 리그 ID 매핑
+            league_id = next((lid for name, lid in league_map.items() if league_name.startswith(name)), None)
+            home_id = team_map.get(home_name)
+            away_id = team_map.get(away_name)
+
+            if not league_id or not home_id or not away_id:
+                print(f"❌ 매핑 실패: {league_name} | {home_name} vs {away_name}")
+                continue
+
+            cursor.execute(insert_sql, (match_id, league_id, home_id, away_id, start_ts))
+            inserted_count += 1
+
+    except Exception as ex:
+        print(f"⚠️ 오류: {date_str} | {ex}")
+
+    current_date += timedelta(days=1)
+
+# ✅ 정리
+conn.commit()
+cursor.close()
+conn.close()
+driver.quit()
+
+print(f"✅ 전체 저장 완료: {inserted_count}개 경기")
