@@ -6,10 +6,16 @@ import json
 import pymysql
 from datetime import datetime, timedelta
 
+# # ✅ 날짜 범위 자동 설정 (오늘 ~ 오늘+14일)
+# # ✅ 날짜 범위 수동 설정
+# start_date = datetime.strptime("2025-05-01", "%Y-%m-%d")
+# end_date = datetime.strptime("2025-08-20", "%Y-%m-%d")
+
+
 # ✅ 날짜 범위 자동 설정 (오늘 ~ 오늘+14일)
-# ✅ 날짜 범위 수동 설정
-start_date = datetime.strptime("2025-05-01", "%Y-%m-%d")
-end_date = datetime.strptime("2025-08-20", "%Y-%m-%d")
+start_date = datetime.today()
+end_date = start_date + timedelta(days=14)
+
 
 print(f"📆 수집 범위: {start_date.strftime('%Y-%m-%d')} ~ {end_date.strftime('%Y-%m-%d')}")
 

@@ -5,22 +5,22 @@ import time
 import json
 import pymysql
 
-# ✅ 프록시 주소 설정 (원한다면 사용, 아니면 주석 처리)
-proxy = "42.118.74.84:16000"  # ← 여기에 원하는 프록시
+# ✅ 프록시 설정 (필요 없으면 주석 처리)
+proxy = "212.110.188.189:34405"
 
-# ✅ 크롬드라이버 설정
+# ✅ 크롬 드라이버 설정
 options = Options()
 options.add_argument("--headless")
 options.add_argument("--disable-gpu")
 options.add_argument("--no-sandbox")
 options.add_argument("--disable-blink-features=AutomationControlled")
 options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36")
-options.add_argument(f"--proxy-server=http://{proxy}")  # 프록시 적용
+options.add_argument(f"--proxy-server=http://{proxy}")  # 프록시 제거 시 이 줄 삭제
 
 service = Service("C:/Users/BIT/Desktop/chromedriver-win64/chromedriver.exe")
 driver = webdriver.Chrome(service=service, options=options)
 
-# ✅ 탐지 방지 스크립트
+# ✅ Selenium 탐지 방지
 driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
     "source": """
     Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
@@ -37,7 +37,20 @@ conn = pymysql.connect(
 )
 cursor = conn.cursor()
 
-# ✅ INSERT SQL - 복합키 (match_id, team_id) 기반 갱신
+# ✅ 저장 안된 경기만 조회
+target_year = "2025"
+cursor.execute("""
+    SELECT m.id, m.home_team_id, m.away_team_id
+    FROM matches m
+    WHERE m.start_time LIKE %s
+      AND m.id NOT IN (
+        SELECT DISTINCT match_id FROM match_score
+      )
+    ORDER BY m.start_time ASC
+""", (f"{target_year}%",))
+matches = cursor.fetchall()
+
+# ✅ INSERT SQL
 insert_sql = """
 INSERT INTO match_score (match_id, team_id, score)
 VALUES (%s, %s, %s)
@@ -45,16 +58,9 @@ ON DUPLICATE KEY UPDATE
     score = VALUES(score)
 """
 
-# ✅ 재시도할 match_id 리스트
-target_matches = [
-    (8243584, 37, 44),
-    (8280762, 2817, 2829)
-]
-
 saved_count = 0
 
-# ✅ 재시도 로직
-for match_id, home_id, away_id in target_matches:
+for match_id, home_id, away_id in matches:
     try:
         url = f"https://api.sofascore.com/api/v1/event/{match_id}"
         driver.get(url)
@@ -70,14 +76,14 @@ for match_id, home_id, away_id in target_matches:
             cursor.execute(insert_sql, (match_id, home_id, home_score))
             cursor.execute(insert_sql, (match_id, away_id, away_score))
             saved_count += 2
-            print(f"✅ 저장 성공: {match_id} | {home_score}:{away_score}")
+            print(f"✅ 저장: {match_id} | {home_score}:{away_score}")
         else:
             print(f"❌ 스코어 없음: {match_id}")
 
     except Exception as e:
         print(f"⚠️ 오류 발생: {match_id} | {e}")
 
-# ✅ 마무리
+# ✅ 종료
 conn.commit()
 cursor.close()
 conn.close()
