@@ -6,7 +6,7 @@ import json
 import pymysql
 
 # ✅ 프록시 설정 (필요 없으면 주석 처리)
-proxy = "212.110.188.189:34405"
+proxy = "57.129.81.201:8080"
 
 # ✅ 크롬 드라이버 설정
 options = Options()

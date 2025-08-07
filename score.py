@@ -4,11 +4,12 @@ from selenium.webdriver.chrome.service import Service
 import time
 import json
 import pymysql
+from datetime import datetime, timedelta
 
-# ✅ 프록시 주소 설정
-proxy = "212.110.188.189:34405"
+# ✅ 프록시 주소 설정 (필요 시 수정)
+proxy = "38.147.98.190:8080"
 
-# ✅ 크롬드라이버 설정 - 프록시 및 탐지 방지
+# ✅ 크롬드라이버 설정
 options = Options()
 options.add_argument("--headless")
 options.add_argument("--disable-gpu")
@@ -27,7 +28,6 @@ driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
     """
 })
 
-
 # ✅ DB 연결
 conn = pymysql.connect(
     host='localhost',
@@ -38,22 +38,33 @@ conn = pymysql.connect(
 )
 cursor = conn.cursor()
 
-# ✅ 특정 연도 경기만 조회 (예: 2019년)
-target_year = "2025"
+# ✅ 오늘 날짜 기준 ±7일 범위 생성
+today = datetime.today()
+start_range = (today - timedelta(days=7)).strftime('%Y-%m-%d')
+end_range = (today + timedelta(days=7)).strftime('%Y-%m-%d')
+
+# ✅ 범위 내 경기만 조회
 cursor.execute("""
     SELECT id, home_team_id, away_team_id 
     FROM matches 
-    WHERE start_time LIKE %s 
+    WHERE start_time BETWEEN %s AND %s
     ORDER BY start_time ASC
-""", (f"{target_year}%",))
+""", (start_range, end_range))
 matches = cursor.fetchall()
 
-# ✅ INSERT SQL - 복합키 (match_id, team_id) 기반 갱신
-insert_sql = """
+# ✅ INSERT SQL - 점수 저장
+insert_score_sql = """
 INSERT INTO match_score (match_id, team_id, score)
 VALUES (%s, %s, %s)
 ON DUPLICATE KEY UPDATE
     score = VALUES(score)
+"""
+
+# ✅ UPDATE SQL - 경기 상태 저장
+update_match_sql = """
+UPDATE matches 
+SET status_code = %s
+WHERE id = %s
 """
 
 saved_count = 0
@@ -62,21 +73,29 @@ for match_id, home_id, away_id in matches:
     try:
         url = f"https://api.sofascore.com/api/v1/event/{match_id}"
         driver.get(url)
-        time.sleep(2)  # 약간 여유를 줘야 응답이 올 때도 있음
+        time.sleep(1.5)
         body = driver.find_element("tag name", "pre").text
         data = json.loads(body)
 
         event = data.get("event", {})
+
+        # ✅ 스코어 추출
         home_score = event.get("homeScore", {}).get("current")
         away_score = event.get("awayScore", {}).get("current")
 
         if home_score is not None and away_score is not None:
-            cursor.execute(insert_sql, (match_id, home_id, home_score))
-            cursor.execute(insert_sql, (match_id, away_id, away_score))
+            cursor.execute(insert_score_sql, (match_id, home_id, home_score))
+            cursor.execute(insert_score_sql, (match_id, away_id, away_score))
             saved_count += 2
-            print(f"✅ 저장: {match_id} | {home_score}:{away_score}")
+            print(f"✅ 스코어 저장: {match_id} | {home_score}:{away_score}")
         else:
             print(f"❌ 스코어 없음: {match_id}")
+
+        # ✅ 상태 코드 저장
+        status_code = event.get("status", {}).get("code")
+        if status_code is not None:
+            cursor.execute(update_match_sql, (status_code, match_id))
+            print(f"📦 상태 저장: {match_id} | status_code={status_code}")
 
     except Exception as e:
         print(f"⚠️ 오류 발생: {match_id} | {e}")
